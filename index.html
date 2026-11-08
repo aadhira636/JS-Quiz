@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Quiz</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="min-h-screen bg-[#0f1023] text-gray-100 flex items-center justify-center p-5">
+
+    <div class="w-full max-w-xl bg-[#191b35] p-6 sm:p-10 rounded-2xl shadow-2xl">
+
+        <div id="startScreen" class="text-center">
+            <h1 class="text-3xl sm:text-4xl font-bold text-pink-500 mb-4">
+                JavaScript Quiz
+            </h1>
+
+            <p class="text-gray-300 mb-7">
+                Test your JavaScript knowledge with 5 simple questions.
+            </p>
+
+            <button id="startButton"
+                class="bg-pink-600 hover:bg-pink-700 px-8 py-3 rounded-lg font-semibold transition">
+                Start Quiz
+            </button>
+        </div>
+
+        <div id="quizScreen" class="hidden">
+
+            <div class="flex justify-between items-center gap-3 flex-wrap text-sm sm:text-base mb-6">
+                <p id="questionNumber" class="text-gray-300"></p>
+                <p id="score" class="text-green-400 font-semibold">Score: 0</p>
+            </div>
+
+            <div class="bg-[#101225] p-5 sm:p-7 rounded-xl border border-gray-700">
+
+                <h2 id="question" class="text-xl font-semibold mb-6 leading-relaxed"></h2>
+
+                <div id="answerButtons" class="flex flex-col gap-3"></div>
+
+                <button id="nextButton"
+                    class="hidden mt-5 w-full bg-purple-600 hover:bg-purple-700 py-3 rounded-lg font-semibold transition">
+                    Next Question
+                </button>
+
+            </div>
+        </div>
+
+        <div id="resultScreen" class="hidden">
+
+            <h1 class="text-3xl font-bold text-pink-500 text-center mb-5">
+                Quiz Completed!
+            </h1>
+
+            <h2 id="finalScore" class="text-xl text-center font-semibold mb-6"></h2>
+
+            <div id="results" class="space-y-3 mb-6"></div>
+
+            <button id="restartButton"
+                class="w-full bg-pink-600 hover:bg-pink-700 py-3 rounded-lg font-semibold transition">
+                Play Again
+            </button>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
